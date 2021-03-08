@@ -1,38 +1,54 @@
+ALTER USER postgres WITH PASSWORD '0000';
+
 create table Winter(
 city varchar,
+	wet_dec real,
+	wet_jan real,
+	wet_feb real,
 	temp_dec real,
 	temp_jan real,
 	temp_feb real
 );
-insert into Winter (city, temp_dec,temp_jan,temp_feb) values ('Nur-Sultan', -18, -29, -25), 
-('Moscow',-7,-10,-5),('New York',5,-7,-5),('Shanghai',8,5,7),('Paris',3,5,6);
+
+insert into Winter (city, wet_dec, wet_jan, wet_feb, temp_dec, temp_jan, temp_feb) values ('Nur-Sultan', 83, 87, 91.5, -18, -29, -25), ('Moscow', 79, 85, 81, -7,-10,-5), ('New York', 76, 71, 69, 5,-7,-5),
+('Shanghai', 71, 74, 76, 8,5,7), ('Paris', 85, 88, 81, 3,5,6);
 
 create table Spring(
 city varchar,
+	wet_march real,
+	wet_apr real,
+	wet_may real, 	
 	temp_march real,
 	temp_apr real,
 	temp_may real
 );
-insert into Spring (city, temp_march,temp_apr,temp_may) values ('Nur-Sultan', -10, 5, 15), ('Moscow',-1,6,15),
-('New York',8,12,18),('Shanghai',9,15,20),('Paris',10,14,17);
+insert into Spring (city, wet_march, wet_apr, wet_may, temp_march, temp_apr, temp_may) values ('Nur-Sultan', 59, 68, 62, -10, 5, 15), ('Moscow',74, 66, 75, -1,6,15),('New York', 64, 53, 72, 8,12,18),
+('Shanghai',76, 77, 78, 9,15,20),('Paris',75,63,69,10,14,17);
 
 create table Summer(
 city varchar,
+	wet_june real,
+	wet_july real,
+	wet_aug real,
 	temp_june real,
 	temp_july real,
 	temp_aug real
 );
-insert into Summer (city, temp_june,temp_july,temp_aug) values ('Nur-Sultan', 23,25,20), ('Moscow',20,22,20),
-('New York',23,27,26),('Shanghai',25,30,29),('Paris',19,21,23);
+insert into Summer (city, wet_june,wet_july,wet_aug,temp_june,temp_july,temp_aug) values ('Nur-Sultan', 49, 56, 47, 23,25,20), ('Moscow', 72, 69, 75, 20,22,20),('New York',78,66,69, 23,27,26),
+('Shanghai',27,32,31, 25,30,29),('Paris',72, 68, 65, 19,21,23);
 
 create table Fall(
 city varchar,
+	wet_sep real,
+	wet_oct real,
+	wet_nov real,
 	temp_sep real,
 	temp_oct real,
 	temp_nov real
 );
-insert into Fall (city, temp_sep,temp_oct,temp_nov) values ('Nur-Sultan', 15,5,-5), ('Moscow',14,5,0),
-('New York',20,15,9),('Shanghai',25,20,13),('Paris',17,13,8);
+insert into Fall (city, wet_sep,wet_oct,wet_nov,temp_sep,temp_oct,temp_nov) values ('Nur-Sultan', 71, 81, 84,15,5,-5), ('Moscow',80,82,86, 14,5,0),('New York',67, 65, 62, 20,15,9),
+('Shanghai',80, 78, 81, 25,20,13),('Paris',71, 81, 84, 17,13,8);
+
 
 
 
